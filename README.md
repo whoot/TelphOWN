@@ -64,9 +64,7 @@ To get a list of all options use:
 Example:
 Dump credentials from Telpho10 system on 192.168.0.139:
 
-	python3 TelphOWN.py -d 192.168.0.24 --dump
-	
-![ScreenShot](/doc/Screenshot.jpg)
+	python3 TelphOWN.py -d 192.168.0.39 --dump
 
 Bug Reporting
 ----
