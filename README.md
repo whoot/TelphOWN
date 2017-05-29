@@ -5,8 +5,6 @@ TelphOWN is a proof-of-concept/penetration testing tool that exploits some vulne
 
 Telpho10 is a german "Hybrid ISDN / VoIP Telefonanlage" (telephone system) which I hacked for fun.
 
-And seriously, Telpho10 (v2.6.31) is absolutely broken and one of the finest examples of how NOT to code applications.
-
 Tipp:
 	Hack it yourself to test/train your skills or just for fun and you will find a lot of vulnerabilities which are easy to exploit.
 
@@ -14,6 +12,8 @@ Since MITRE/CVE decided to cover only [software used most by enterprises](https:
 no CVE number could be assigned for the vulnerabilities found by me.
 
 However, I have notified the team of Telpho10 about the vulnerabilities and they will fix them (hopefully) in the next release.
+
+**Update: Telpho10 v2.6.37 is still vulnerable and I really dont know when they will release a fixed version.**
 
 Exploits
 ----
