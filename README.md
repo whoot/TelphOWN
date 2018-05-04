@@ -13,7 +13,7 @@ no CVE number could be assigned for the vulnerabilities found by me.
 
 However, I have notified the team of Telpho10 about the vulnerabilities and they will fix them (hopefully) in the next release.
 
-**Update: Telpho10 v2.6.37 is still vulnerable and I really dont know when they will release a fixed version.**
+**Update: Telpho10 v2.6.39 is still vulnerable and the developer ignores my emails. Therefore I assume that this is a WONT FIX.**
 
 Exploits
 ----
