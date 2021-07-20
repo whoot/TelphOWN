@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 #-------------------------------------------------------------------------------
 # TelphOWN - Telpho10 Ownage Tool
-# Copyright (c) 2016 Jan Rude
+# Copyright (c) 2021 Jan Rude
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -62,14 +62,16 @@ class Request:
 		print('\n[+] Requesting Cookie...')
 		payload = {'action': 'login', 'username': username, 'password': password}
 		try:
-			r = requests.post(ip + '/telpho/login.php', payload, allow_redirects=False)
+			r = requests.post(ip + '/telpho/login.php', payload, allow_redirects=False, timeout=5)
 			cookie = dict(PHPSESSID=r.cookies['PHPSESSID'])
 			return [r.text, cookie]
-		except requests.exceptions.Timeout:
+		except requests.Timeout:
 			print('[x] Connection timed out')
-		except requests.exceptions.ConnectionError as e: 
+			exit()
+		except requests.ConnectionError:
 			print('[x] Connection error\n | Please make sure you provided the right URL')
-		except requests.exceptions.RequestException as e:
+			exit()
+		except requests.RequestException as e:
 			print(str(e))
 
 	@staticmethod
@@ -82,13 +84,16 @@ class Request:
 				anything else
 		"""
 		try:
-			r = requests.get(url, cookies=cookie)
+			r = requests.get(url, cookies=cookie, timeout=5)
 			return r.text
-		except requests.exceptions.Timeout:
+		except requests.Timeout as e:
 			print('[x] Connection timed out')
-		except requests.exceptions.ConnectionError as e: 
-			print('[x] Connection error\n | Please make sure you provided the right URL')
-		except requests.exceptions.RequestException as e:
+			exit()
+		except requests.ConnectionError:
+			print('[x] Connection error')
+			print(' | Server seems down.')
+			exit()
+		except requests.RequestException as e:
 			print(str(e))
 
 
@@ -102,11 +107,13 @@ class Request:
 				anything else
 		"""
 		try:
-			r = requests.post(url, cookies=cookie, data=multipart_data, headers={'Content-Type': multipart_data.content_type})
+			r = requests.post(url, cookies=cookie, data=multipart_data, headers={'Content-Type': multipart_data.content_type}, timeout=5)
 			return r.text
-		except requests.exceptions.Timeout:
+		except requests.Timeout:
 			print('[x] Connection timed out')
-		except requests.exceptions.ConnectionError as e: 
+			exit()
+		except requests.ConnectionError:
 			print('[x] Connection error\n | Please make sure you provided the right URL')
-		except requests.exceptions.RequestException as e:
+			exit()
+		except requests.RequestException as e:
 			print(str(e))

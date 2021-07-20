@@ -8,12 +8,8 @@ Telpho10 is a german "Hybrid ISDN / VoIP Telefonanlage" (telephone system) which
 Tipp:
 	Hack it yourself to test/train your skills or just for fun and you will find a lot of vulnerabilities which are easy to exploit.
 
-Since MITRE/CVE decided to cover only [software used most by enterprises](https://cve.mitre.org/cve/data_sources_product_coverage.html),
-no CVE number could be assigned for the vulnerabilities found by me.
 
-However, I have notified the team of Telpho10 about the vulnerabilities and they will fix them (hopefully) in the next release.
-
-**Update: Telpho10 v2.6.39 is still vulnerable and the developer ignores my emails. Therefore I assume that this is a WONT FIX.**
+**Telpho10 v2.6.48 is still vulnerable and the developer is ignoring my emails. Therefore I assume that this is a WONT FIX.**
 
 Exploits
 ----
@@ -37,22 +33,16 @@ Preferably, you can download TelphOWN by cloning the [Git](https://github.com/wh
 
     git clone https://github.com/whoot/TelphOWN.git
 
-TelphOWN works with [Python](http://www.python.org/download/) version **3.x** on Debian/Ubuntu, RedHat and Windows platforms.
+TelphOWN works with [Python](http://www.python.org/download/) version **3.x**.
 
 You might need to install following packages:
 
 * [Requests](https://pypi.python.org/pypi/requests/)
 * [Requests-toolbelt](https://pypi.python.org/pypi/requests-toolbelt)
 
-On Debian/Ubuntu you can install the packages with apt-get:
+You can install the packages with apt-get:
 
 	apt-get install python3-requests python3-requests-toolbelt
-
-On Redhat you can install all needed packages with easy_install:
-
-	easy_install argparse
-	easy_install requests
-	easy_install requests-toolbelt
 
 Usage
 ----
@@ -74,15 +64,13 @@ Links
 ----
 
 * Download: [.tar.gz](https://github.com/whoot/TelphOWN/tarball/master) or [.zip](https://github.com/whoot/TelphOWN/archive/master.zip)
-* Changelog: [Here](https://github.com/whoot/TelphOWN/blob/master/doc/CHANGELOG.md)
-* TODO: [Here](https://github.com/whoot/TelphOWN/blob/master/doc/TODO.md)
 * Issue tracker: [Here](https://github.com/whoot/TelphOWN/issues)
 
 # License
 
 TelphOWN - Telpho10 Ownage Tool
 
-Copyright (c) 2016 Jan Rude
+Copyright (c) 2021 Jan Rude
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
